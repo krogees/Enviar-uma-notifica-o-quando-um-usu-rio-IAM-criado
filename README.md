@@ -8,7 +8,35 @@ O modelo do CloudFormation cria um evento do Amazon CloudWatch Events e uma fun�
 Pré-requisitos
 Uma conta ativa da AWS
 
-Uma trilha do AWS CloudTrail criada e implantada
+AWS CloudTrail criada e implantada
 
 Limitações 
 O modelo do AWS CloudFormation deve ser implantado somente para CreateUser. 
+
+Create the S3 bucket for the Lambda script:
+
+- Open the Amazon S3 console, and choose or create an S3 bucket. This S3 bucket will host the Lambda code .zip file. The S3 bucket name cannot contain leading slashes.
+
+Upload the Lambda code to the S3 bucket:
+
+- Upload the Lambda code .zip file provided in the Attachments section to the S3 bucket that you defined.
+
+Deploy the CloudFormation template:
+
+- On the CloudFormation console, deploy the CloudFormation New_Create_IAM_User.yml template that's provided as an attachment to this pattern. In the next epic, provide values for the template parameters.
+
+Complete the parameters in the CloudFormation template:
+
+- Enter the name of the S3 bucket that you created or chose in the first epic.
+
+Provide the S3 key:
+- Provide the location of the Lambda code .zip file in your S3 bucket, without leading slashes (for example, <directory>/<file-name>.zip).
+
+Provide an email address:
+- Provide an active email address to receive Amazon SNS notifications.
+
+Define the logging level:
+- Define the logging level and frequency for your Lambda function. Info designates detailed informational messages on the application’s progress. Error designates error events that could still allow the application to continue running. Warning designates potentially harmful situations.
+
+Confirm the subscription:
+- When the template successfully deploys, it sends a subscription email message to the email address provided. To receive notifications, you must confirm this email subscription.
