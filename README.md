@@ -1,4 +1,4 @@
-# Na Amazon Web Services (AWS), você pode usar esse padrão para implantar um modelo do AWS CloudFormation para receber notificações automaticamente quando os usuários do AWS Identity and Access Management (IAM) são criados. 
+Na Amazon Web Services (AWS), você pode usar esse padrão para implantar um modelo do AWS CloudFormation para receber notificações automaticamente quando os usuários do AWS Identity and Access Management (IAM) são criados. 
 
 Usando o IAM, você pode gerenciar o acesso aos serviços e recursos da AWS com segurança. Você pode criar e gerenciar usuários e grupos da AWS e usar permissões para permitir e negar a esses usuários e grupos o acesso aos recursos da AWS.
 
