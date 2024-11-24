@@ -13,30 +13,34 @@ AWS CloudTrail criada e implantada
 Limitações 
 O modelo do AWS CloudFormation deve ser implantado somente para CreateUser. 
 
-Create the S3 bucket for the Lambda script:
+Criar o bucket S3 para o script Lambda:
 
-- Open the Amazon S3 console, and choose or create an S3 bucket. This S3 bucket will host the Lambda code .zip file. The S3 bucket name cannot contain leading slashes.
+    Abra o console do Amazon S3 e escolha ou crie um bucket S3. Esse bucket S3 hospedará o arquivo zip do código Lambda . . O nome do bucket S3 não pode conter barras iniciais.
 
-Upload the Lambda code to the S3 bucket:
+Faça o upload do código Lambda para o bucket S3:
 
-- Upload the Lambda code .zip file provided in the Attachments section to the S3 bucket that you defined.
+    Faça o upload do arquivo zip do código . do Lambda fornecido na seção Anexos para o bucket S3 que você definiu.
 
-Deploy the CloudFormation template:
+Implantar o modelo do CloudFormation:
 
-- On the CloudFormation console, deploy the CloudFormation New_Create_IAM_User.yml template that's provided as an attachment to this pattern. In the next epic, provide values for the template parameters.
+    No console do CloudFormation, implante o modelo CloudFormation New_Creapfte IAM_User.yml que é fornecido como um anexo a este padrão. No próximo épico, forneça valores para os parâmetros do modelo.
 
-Complete the parameters in the CloudFormation template:
+Complete os parâmetros no modelo do CloudFormation:
 
-- Enter the name of the S3 bucket that you created or chose in the first epic.
+    Digite o nome do bucket S3 que você criou ou escolheu no primeiro épico.
 
-Provide the S3 key:
-- Provide the location of the Lambda code .zip file in your S3 bucket, without leading slashes (for example, <directory>/<file-name>.zip).
+Fornecer a chave S3:
 
-Provide an email address:
-- Provide an active email address to receive Amazon SNS notifications.
+    Forneça o local do arquivo. zip do código Lambda no bucket S3, sem barras de início (por exemplo, /.zip).
 
-Define the logging level:
-- Define the logging level and frequency for your Lambda function. Info designates detailed informational messages on the application’s progress. Error designates error events that could still allow the application to continue running. Warning designates potentially harmful situations.
+Forneça um endereço de e-mail:
 
-Confirm the subscription:
-- When the template successfully deploys, it sends a subscription email message to the email address provided. To receive notifications, you must confirm this email subscription.
+    Forneça um endereço de e-mail ativo para receber notificações do Amazon SNS.
+
+Definir o nível de registo:
+
+    Defina o nível de registro e a frequência para sua função do Lambda. Info designa mensagens informativas detalhadas sobre o progresso da aplicação. Erro designa eventos de erro que ainda podem permitir que o aplicativo continue funcionando. Aviso designa situações potencialmente prejudiciais.
+
+Confirmar a subscrição:
+
+    Quando o modelo é implantado com sucesso, ele envia uma mensagem de e-mail de assinatura para o endereço de e-mail fornecido. Para receber notificações, você deve confirmar esta assinatura de e-mail.
